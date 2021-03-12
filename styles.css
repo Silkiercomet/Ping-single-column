@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1);}
+    100% { transform: scale(1); }
+    
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root{
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 1.25rem;
+    padding: 0;
+    margin: 0;
+}
+body{
+    padding: 1.6rem 1rem;
+    margin: 1.6rem 1rem;
+}
+.wrapper{
+    display: grid;
+    place-items: center;
+}
+.header{
+    text-align: center;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    max-width: 100% ;
+}
+.text-input{
+    display: flex;
+}
+#text-input{
+    width: 350px;
+    border-radius: 20px;
+    background: white;
+    border: 1px solid hsl(0, 0%, 59%);
+    color: hsl(209, 33%, 12%);
+    padding: 0.5rem;
+    line-height: 1rem;
+    margin-right: 0.7rem;
+}
+#text-input:focus{
+    outline: none;
+}
+.error{
+    font-size: 0.5rem;
+    margin-left: 0.4rem;
+    color: red;
+    visibility: hidden;
+}
+.error-m{
+    display: none;
+    font-size: 0.5rem;
+    color: red;
+}
+.btn{
+    display: block;
+    background-color: hsl(223, 87%, 63%);
+    padding: 0 2.5rem ;
+    border: 0;
+    border-radius: 2rem;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    transition: all 500ms;
+}
+.btn:focus{
+    outline: none;
+}
+.btn:hover{
+    background-color: hsla(223, 87%, 63%,80%);
+    
+}
+.btn a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+.dashboard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    max-width: 600px;
+}
+.dashboard img{
+    max-width: 100%;
+}
+.list-i{
+    display: flex;
+    list-style: none;
+    
+}
+.icon{
+    margin: 0 0.4rem;
+}
+.icon:first-child{
+    margin-left: 0;
+}
+.icon a{
+    text-decoration: none;
+    color: hsl(223, 87%, 63%);
+    font-size: 0.9rem;
+    line-height: 1rem;
+    border: 1px solid hsl(223, 100%, 88%);
+    border-radius: 50%;
+    padding: 0.5rem 0.6rem;
+}
+.fa-facebook-f{
+    padding: 4px 4px;
+}
+.list-i > .pulse a:hover{ 
+    background-color: hsl(223, 87%, 63%); 
+    color: white; 
+}
+.list-i > *:hover{
+    animation: pulse 1s 1;
+    animation-timing-function: linear; 
+}
+.copyright{
+    text-align: center;
+    font-size: 0.7rem;
+    color: hsl(0, 0%, 59%);
+    padding-top: 2rem;
+}
+@media (max-width:600px) {
+    .text-input{
+        flex-direction: column;
+    }
+    #text-input{
+        margin-right: 0;
+    }
+    .btn{
+        display: block;
+        width: 350px;
+        background-color: hsl(223, 87%, 63%);
+        padding: 0.8rem 0 ;
+        border: 0;
+        margin-top: 1rem;
+        border-radius: 2rem;
+        box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+        transition: all 500ms;
+    }
+}
